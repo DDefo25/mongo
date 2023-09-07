@@ -18,7 +18,6 @@ const MONGO_URL = process.env.MONGO_URL;
     try {
         await mongoose.connect(MONGO_URL);
         app.listen(PORT);
-        console.log(MONGO_URL);
         console.log('server is listening: ' + PORT);
     } catch (e) {
         console.log(e)
