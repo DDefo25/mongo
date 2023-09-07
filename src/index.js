@@ -13,7 +13,7 @@ app.use(errorMiddleware);
 
 
 const PORT = process.env.PORT || 8989;
-const MONGO_URL = process.env.MONGO_URL;
+const MONGO_URL = process.env.MONGO_URL || "mongodb://root:pass@localhost:27017";
 (async function (PORT, MONGO_URL) {
     try {
         await mongoose.connect(MONGO_URL);
